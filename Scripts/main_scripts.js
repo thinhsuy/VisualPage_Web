@@ -14,7 +14,11 @@ const play = document.querySelectorAll('.lis');
 for (let i=0; i<play.length; i++){
     if (i==1){
         play[i].onclick=()=>{
-            OpenProjectPage();
+            ProjectPageReady();
+            var temp = document.querySelector('.Project-page');
+            temp.style.opacity = '1';
+            temp.style.transform = 'scale(1) translate(0, 0)';
+            CloseProjectPage();
         }
     }
     else if (i==0){
@@ -147,11 +151,14 @@ function OpenProjectPage(){
 }
 
 function CloseProjectPage(){
-    let projectPage = document.querySelector('.Project-page');
-    let projectContainer = document.querySelector('.navigation-container');
-    document.querySelector('.ul-menu').style.opacity = "1";
-    projectPage.style.zIndex = '-2';
-    projectContainer.style.transform = 'translateY(-700%) scale(0.1)';
+    let backbtns = document.querySelectorAll('.mouse');
+    backbtns.forEach(btn => {
+        btn.onclick=()=>{
+            let projectPage = document.querySelector('.Project-page');
+            projectPage.style.opacity = '0';
+            projectPage.style.transform = 'scale(0) translate(0, -100%)';
+        }
+    });
 }
 
 rainTime = setTimeout(Rainy, 3500)
@@ -168,3 +175,81 @@ window.transitionToPage = function(href) {
 document.addEventListener('DOMContentLoaded', function(event) {
     document.querySelector('body').style.opacity = 1
 })
+
+function ProjectPageReady(){
+    document.querySelector('#ds-describe').onclick=()=>{
+        window.open('https://famous-antique-470.notion.site/Computer-Science-9352447c180e4afcbcb487332ee59a1d');
+    }
+    document.querySelector('#se-describe').onclick=()=>{
+
+    }
+    $(document).ready(function () {
+        var $app = $('.app');
+        var $img = $('.app__img');
+        var $pageNav1 = $('.pages__item--1');
+        var $pageNav2 = $('.pages__item--2');
+        var animation = true;
+        var curSlide = 1;
+        var scrolledUp = void 0,
+            nextSlide = void 0;
+
+        var pagination = function pagination(slide, target) {
+            animation = true;
+            if (target === undefined) {
+                nextSlide = scrolledUp ? slide - 1 : slide + 1;
+            } else {
+                nextSlide = target;
+            }
+
+            $('.pages__item--' + nextSlide).addClass('page__item-active');
+            $('.pages__item--' + slide).removeClass('page__item-active');
+
+            $app.toggleClass('active');
+            setTimeout(function () {
+                animation = false;
+            }, 3000);
+        };
+
+        var navigateDown = function navigateDown() {
+            if (curSlide > 1) return;
+            scrolledUp = false;
+            pagination(curSlide);
+            curSlide++;
+        };
+
+        var navigateUp = function navigateUp() {
+            if (curSlide === 1) return;
+            scrolledUp = true;
+            pagination(curSlide);
+            curSlide--;
+        };
+
+        setTimeout(function () {
+            $app.addClass('initial');
+        }, 1500);
+
+        setTimeout(function () {
+            animation = false;
+        }, 4500);
+
+        $(document).on('mousewheel DOMMouseScroll', function (e) {
+            var delta = e.originalEvent.wheelDelta;
+            if (animation) return;
+            if (delta > 0 || e.originalEvent.detail < 0) {
+                navigateUp();
+            } else {
+                navigateDown();
+            }
+        });
+
+        $(document).on("click", ".pages__item:not(.page__item-active)", function () {
+            if (animation) return;
+            var target = +$(this).attr('data-target');
+            pagination(curSlide, target);
+            curSlide = target;
+        });
+    });
+}
+    
+    
+    

@@ -143,8 +143,8 @@
                     <div style="left: 0;" class="content" data-jarallax-element="-200 0">
                         <p>At the end, I know that I never be a loser in everyone at all. Once still there is a person believe in me, I would never stop what I'm doing and just different with the past, the time that I always looked down myself as other's thinking. And now I know that I greater than what they expected to me ... Special thank to my greatest teacher and friends, who always have belief in me althrough I still be a loser .... </p>
                     </div>
-                    <div id="back-content" style="cursor: pointer; text-align:center; right: 0; top: 10rem;" class="content" data-jarallax-element="-200 0">
-                        <p>Thank you for spending time with my life-story, to back home just press in this tab!</p>
+                    <div id="back-content" style="border-radius:30px; cursor: pointer; text-align:center; right: 0; top: 10rem;" class="content" data-jarallax-element="-200 0">
+                        <p>Back to menu</p>
                     </div>
                 </div>
             </div>
@@ -153,50 +153,46 @@
 
     <!-- PROJECT PAGE -->
     <div class="Project-page">
-        <div class="navigation-container">
-            <ul>
-                <li data-text="Mortal Kumbat" class="project-list active" style="--clr:#2192FF">
-                    <a href="#" onclick="transitionToPage('MortalKumbat.html')"><span class="project-icon" style="--clr:#2192FF">
-                        <span class="material-symbols-outlined">
-                            skull
-                        </span>
-                    </span></a>
-                </li>
-                <li data-text="Pokemon War" class="project-list" style="--clr:#38E54D">
-                    <a href="#" onclick="transitionToPage('PokeWar.html')"><span class="project-icon" style="--clr:#38E54D">
-                        <span class="material-symbols-outlined">
-                            flutter_dash
-                        </span>
-                    </span></a>
-                </li>
-                <li data-text="Training Model" class="project-list" style="--clr:#9CFF2E">
-                    <a href="#"><span class="project-icon" style="--clr:#9CFF2E">
-                        <span class="material-symbols-outlined">
-                            model_training
-                        </span>
-                    </span></a>
-                </li>
-                <li data-text="OS Decoding" class="project-list" style="--clr:#FDFF00">
-                    <a href="#"><span class="project-icon" style="--clr:#FDFF00">
-                        <span class="material-symbols-outlined">
-                            data_exploration
-                        </span>
-                    </span></a>
-                </li>
-                <li data-text="Back" class="project-list" style="--clr:#FF9494">
-                    <a href="#" onclick="CloseProjectPage()"><span class="project-icon" style="--clr:#FF9494">
-                        <span class="material-symbols-outlined">
-                            expand_less
-                        </span>
-                    </span></a>
-                </li>
-                <div class="project-indicator"></div>
-            </ul>
-        </div>
+        <div class="cont">
+            <div class="mouse"></div>
+            <div class="app">
+                <div class="app__bgimg">d
+                    <div class="app__bgimg-image app__bgimg-image--1"></div>
+                    <div class="app__bgimg-image app__bgimg-image--2"></div>
+                </div>
+                <div class="app__img">
+                    <img onmousedown="return false" src="Sources/lan.png" alt="">
+                </div>
+                <div class="app_text app__text--1">
+                    <div class="app__text-line app__text-line--4">Computer Science</div>
+                    <div class="app__text-line app__text-line--3">Data Scientist</div>
+                    <div id="ds-describe" class="app__text-line app__text-line--2">With this as my principal academic focus, I would focus in this segment in my career path. I approached several computer science techniques, including such object detection, machine learning, reinforcement learning, data forecast and prediction, big data treatment, etc., by taking the advantage of the outstanding university environment.
+                        <span class="tooltiptext">Click for detail</span>
+                    </div>
+                    
+                </div>
+                <div class="app_text app__text--2">
+                    <div class="app__text-line app__text-line--4">Software</div>
+                    <div class="app__text-line app__text-line--3">Architecture</div>
+                    <div id="se-describe" class="app__text-line app__text-line--2">This discipline, which is different from computer science, may be considered my talent area since it facilitates me to approach new techniques and performing a full-stack operation on an application procedure, including BA, implementation, architect, designer, tester, etc.
+                        <span class="tooltiptext">Click for detail</span>
+                    </div>
+                </div>
+                <div class="pages">
+                    <ul class="page_list">
+                        <li data-target="1" class="page__item pages__item--1 page__item-active"></li>
+                        <li data-target="2" class="page__item pages__item--2"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mouse"></div>
+        </div>  
     </div>
+
     
     <script src="disc/jarallax.js"></script>
     <script src="disc/jarallax-element.js"></script>
+    <script src="Scripts/jquery/3.4.1/jquery.min.js"></script>
     <script src="Scripts/main_scripts.js"></script>
 </body>
 </html>
