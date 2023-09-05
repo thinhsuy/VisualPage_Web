@@ -41,13 +41,7 @@ for (let i=0; i<play.length; i++){
         }
     }
     else if (i==3){
-        play[i].onclick=()=>{
-            const temp = document.querySelector('.Visual-page');
-            temp.style.right = "0%";
-            temp.style.opacity = "1";
-            temp.style.transform = "scale(1)";
-            temp.style.borderRadius = "0%";
-        }
+        //
     }
 }
 
@@ -92,19 +86,6 @@ for (let i=0; i<media.length; i++){
     }
 }
 
-
-const black = document.querySelector('.black');
-window.onmousemove = function(e){
-    const x = e.clientX;
-    black.style.left = x+'px';
-    if (x>=window.innerWidth-10){
-        const temp = document.querySelector('.Visual-page');
-        temp.style.right = "-100%";
-        temp.style.opacity = "0";
-        temp.style.transform = "scale(0.1)";
-        temp.style.borderRadius = "100%";
-    }
-}
 
 const introSpan = document.querySelectorAll('.first-span');
 const intorSection = document.querySelector('.first-text');

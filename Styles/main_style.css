@@ -365,63 +365,6 @@ body {
     background: rgb(145, 145, 145);
 }
 
-
-/* VISUAL PAGE */
-.Visual-page {
-    position: absolute;
-    right: -100%;
-    z-index: 1000;
-    width: 100%;
-    height: 100vh;
-    opacity: 0;
-    transform: scale(0.1);
-    border-radius: 100%;
-    transition: all 2s;
-}
-
-.BW-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.BW-text {
-    position: relative;
-    font-size: 10vw;
-    text-align: center;
-    line-height: 26rem;
-    text-transform: uppercase;
-    font-weight: 800;
-}
-
-.BW-span {
-    font-size: 10vw;
-    color: transparent;
-    -webkit-text-stroke: 0.3vw black;
-}
-
-.BW-pic {
-    position: absolute;
-    color: black;
-    cursor: pointer;
-}
-
-.black {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    mix-blend-mode: difference;
-}
-
 /* ABOUT PAGE */
 .About-page {
     background: #111;
@@ -530,7 +473,8 @@ body {
     align-items: center;
     height: 100vh;
     width: 100%;
-    background-image: url(../Sources/projectBG.png);
+    background: #111;
+    /* background-image: url(../Sources/projectBG.png); */
     background-size: cover;
     overflow: hidden;
 }
